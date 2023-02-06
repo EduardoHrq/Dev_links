@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+:root {
+  --text-color: #fff;
+  --border-o: rgba(255, 255, 255, 0.5);
+  --border: #fff;
+  --bg-o: rgba(255, 255, 255, 0.2);
+  --bg: #212529;
+  --bt-image: url('./assets/moon.svg')
+}
+
+.light {
+  --text-color: #000000;
+  --border-o: rgba(0, 0, 0, 0.5);
+  --border: #212529;
+  --bg-o: rgba(0, 0, 0, 0.2);
+  --bg: #f8f9fa;
+  --bt-image: url('./assets/Sun.svg')
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--bg);
+  height: 100vh;
+  display: flex;
+}
+
+#container {
+  width: 360px;
+  margin: 25px auto 0;
+}
+
+#profile {
+  text-align: center;
+  padding: 15px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: bold;
+  line-height: 24px;
+}
+
+#switch{
+  position: relative;
+  width: 64px;
+
+  margin: 7px auto;
+}
+
+#switch button {
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: #fff var(--bt-image) no-repeat center;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  left: 0;
+
+  transform: translateY(-50%);
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+
+  background: var(--bg-o);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  border-radius: 9999px;
+}
+
+.light #switch button{
+  right: 0;
+  left: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 15px 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+ul li a {
+  text-decoration: none;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+
+  background: var(--bg-o);
+  border: 1px solid var(--border-o);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+
+  transition: background .2s;
+}
+
+ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid var(--border);
+}
+
+#social-links {
+  display: flex;
+  justify-content: space-evenly;
+
+  padding: 15px 0;
+
+  font-size: 35px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  border-radius: 50%;
+
+  transition: .2s;
+}
+
+#social-links a:hover {
+  background-color: var(--bg-o);
+}
+
+footer {
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
